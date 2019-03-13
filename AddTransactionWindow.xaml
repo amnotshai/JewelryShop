@@ -1,0 +1,186 @@
+﻿<Window x:Class="JewelryShop.AddTransactionWindow"
+                xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:JewelryShop"
+        mc:Ignorable="d"
+        Title="AddTransactionWindow" 
+        Height="545.83" 
+        Width="509.363"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="None"
+        Activated="Window_Activated">
+    <Window.Background>
+        <ImageBrush ImageSource="geometry-background.png"/>
+    </Window.Background>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="92*"/>
+            <ColumnDefinition Width="240*" />
+            <ColumnDefinition Width="167*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <DatePicker
+            materialDesign:HintAssist.Hint="Pick Date of Transaction"
+            Style="{StaticResource MaterialDesignFloatingHintDatePicker}"
+            Grid.Column="1" 
+            Margin="36,5,10,15" 
+            Grid.Row="6" FontFamily="Swis721 Blk BT" />
+        <ComboBox
+            materialDesign:HintAssist.Hint="Jewelry"
+            Name="cmbProduct"
+            Style="{StaticResource MaterialDesignFloatingHintComboBox}" 
+            Grid.Column="1" 
+            Margin="36,6,12,18" 
+            Grid.Row="1" 
+            Height="40" 
+            FontFamily="Swis721 Blk BT">
+            <ComboBoxItem>
+                Bracelet
+            </ComboBoxItem>
+            <ComboBoxItem>
+                Necklace
+            </ComboBoxItem>
+            <ComboBoxItem>
+                Earrings
+            </ComboBoxItem>
+            <ComboBoxItem>
+                Rings
+            </ComboBoxItem>
+        </ComboBox>
+        <Label Content="Price" 
+               HorizontalAlignment="Center" 
+               Margin="10,0,142,0" 
+               VerticalAlignment="Top" 
+               Grid.Row="5"
+               Width="88" 
+               Height="28" Grid.Column="1" FontFamily="Swis721 Blk BT"/>
+        <TextBlock HorizontalAlignment="Right" 
+                   Name="txtbPrice"
+                   Margin="0,33,32,0" 
+                   TextWrapping="Wrap" 
+                   Text="" 
+                   VerticalAlignment="Top" 
+                   Width="156" 
+                   Height="29" 
+                   Grid.Column="1" 
+                   Grid.Row="5" 
+                   Background="White"/>
+        <TextBox
+             TextWrapping="Wrap"
+             VerticalAlignment="Stretch"
+             MinWidth="250"
+             AcceptsReturn="True"
+             VerticalScrollBarVisibility="Auto"
+             SpellCheck.IsEnabled="True"
+             materialDesign:HintAssist.Hint="Other Details" Grid.Row="7" Grid.Column="1" Margin="10,3,73,0" Grid.ColumnSpan="2" FontFamily="Swis721 Blk BT"/>
+        <Button
+            Name="SaveTransaction"
+            Style="{StaticResource MaterialDesignFlatButton}"
+            Click="btnAccept_Click"
+            ToolTip="MaterialDesignFlatButton" 
+            Margin="0,20,10,9" 
+            Grid.Row="9" 
+            Foreground="#FF1000AC" 
+            Height="Auto" Grid.Column="1">
+            ACCEPT
+
+        </Button>
+        <Button 
+                Name="btnAddCustomer"
+                Grid.Column="2"
+                HorizontalAlignment="Left" 
+                Margin="56,10,0,0" 
+                VerticalAlignment="Top" 
+                Width="55" Height="30" 
+                Click="btnAddCustomer_Click" 
+                FontSize="12" BorderBrush="#FF240C4D" Background="#FF2032A2"
+                >
+            <materialDesign:PackIcon
+            Kind="PersonAddOutline"
+            Height="24"
+            Width="24" />
+        </Button>
+        <Button 
+                Name="btnCalculatePrice"
+                Grid.Column="2"
+                HorizontalAlignment="Left" 
+                Margin="56,20,0,0" 
+                VerticalAlignment="Top" 
+                Width="55" Height="30" 
+                Click="BtnCalculatePrice_Click" 
+                FontSize="12" BorderBrush="#FF240C4D" Background="#FF2032A2" Grid.Row="5"
+                >
+            <materialDesign:PackIcon
+            Kind="Calculator"
+            Height="24"
+            Width="24" />
+        </Button>
+        <ComboBox
+            materialDesign:HintAssist.Hint="Quality of Jewelry"
+            Name="cmbQuality"
+            Style="{StaticResource MaterialDesignFloatingHintComboBox}" Grid.Column="1" Margin="36,13,10,11" Grid.Row="2" Height="40" FontFamily="Swis721 Blk BT">
+            <ComboBoxItem>
+                10k
+            </ComboBoxItem>
+            <ComboBoxItem>
+                18k
+            </ComboBoxItem>
+            <ComboBoxItem>
+                21k
+            </ComboBoxItem>
+        </ComboBox>
+        <ComboBox
+            materialDesign:HintAssist.Hint="Customer"
+            Name="cmbCustomers"
+            Style="{StaticResource MaterialDesignFloatingHintComboBox}" 
+            Grid.Column="1" 
+            Margin="36,14,12,10" 
+            Height="40" FontFamily="Swis721 Blk BT"/>
+        <Label x:Name="txtCustomer_Copy" 
+            Content="Add Customer" 
+            HorizontalAlignment="Center" 
+            Margin="37,40,25,50" 
+            VerticalAlignment="Center" 
+            RenderTransformOrigin="0.45,0.47" 
+            Width="105" 
+            Height="38" 
+            Grid.Column="2" 
+            Grid.RowSpan="2" 
+            FontWeight="Bold" FontFamily="Swis721 Blk BT"/>
+        <Image Margin="18,10,13,0" Source="customer.png" Stretch="Fill"/>
+        <Image Margin="21,12,13,10" Source="Jewelry.png" Stretch="Fill" Grid.Row="1"/>
+        <Image Margin="21,10,13,0" Source="Quality.png" Stretch="Fill" Grid.Row="2"/>
+        <Image Margin="18,5,13,2" Grid.Row="6" Source="Date of Transaction.png" Stretch="Fill"/>
+        <Image Margin="10,9,13,0" Grid.Row="5" Source="Price.png" Stretch="Fill"/>
+        <Image Margin="18,5,13,9" Grid.Row="3" Source="Weight.png" Stretch="Fill"/>
+        <Image Margin="17,0,13,8" Grid.Row="4" Source="discount.png" Stretch="Fill"/>
+        <Image Margin="17,10,13,0" Grid.Row="7" Source="details.png" Stretch="Fill"/>
+        <TextBox
+  materialDesign:HintAssist.Hint="Weight"
+            Name="txtWeight"
+  Style="{StaticResource MaterialDesignFloatingHintTextBox}" 
+            Grid.Column="1"
+            Margin="36,0,12,0" 
+            Grid.Row="3" FontFamily="Swis721 Blk BT" />
+        <TextBox
+  materialDesign:HintAssist.Hint="Crystal Weight"
+            Name="txtCrystalWeight"
+  Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+            Grid.Column="1" 
+            Margin="36,0,12,8" 
+            Grid.Row="4" FontFamily="Swis721 Blk BT" />
+    </Grid>
+</Window>
