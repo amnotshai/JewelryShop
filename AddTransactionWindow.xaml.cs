@@ -25,35 +25,25 @@ namespace JewelryShop
         public DataStorage data;
         public Person customer;
         public decimal weight;
+        
+
         public AddTransactionWindow()
         {
             InitializeComponent();
         }
         private void Window_Activated(object sender, EventArgs e)
-        {
+        {   
+
             cmbCustomers.Items.Clear();
+            for(int x=0;x<DataStorages.buyer.Count;x++)
+            {
+                cmbCustomers.Items.Add(DataStorages.buyer[x]);
+            }
+            
             foreach (Person customer in data.customers)
             {
                 cmbCustomers.Items.Add(customer.GetFullName());
             }
-
-
-            //switch(cmbQuality.Text)
-            //{
-            //    case "10k":
-            //        price = DataStorages.price[0];
-            //        return;
-            //    case "18k":
-            //        price = DataStorages.price[1];
-            //        return;
-            //    case "21k":
-            //        price = DataStorages.price[2];
-            //        return;
-
-            //}
-
-
-
 
         }
 
@@ -61,6 +51,11 @@ namespace JewelryShop
         {
 
             main.Show();
+            DataStorages.jewelry.Add(cmbProduct.Text);
+            DataStorages.quality.Add(cmbQuality.Text);
+            DataStorages.weight.Add(weight);
+            DataStorages.details.Add(txtDetails.Text);
+            DataStorages.price.Add(Convert.ToDecimal(txtbPrice.Text));
             this.Hide();
         }
 
@@ -76,19 +71,22 @@ namespace JewelryShop
 
         private void BtnCalculatePrice_Click(object sender, RoutedEventArgs e)
         {
-            weight = Convert.ToDecimal(txtWeight.Text) - Convert.ToDecimal(txtCrystalWeight);
+           
+            weight = Convert.ToDecimal(txtWeight.Text) - Convert.ToDecimal(txtCrystalWeight.Text);
             switch (cmbQuality.Text)
             {
-                case "10K":
-                    txtbPrice.Text = Convert.ToString(weight * DataStorages.price[0]);
-                    return;
-                case "18K":
-                    txtbPrice.Text = Convert.ToString(weight * DataStorages.price[1]);
-                    return;
-                case "21K":
-                    txtbPrice.Text = Convert.ToString(weight * DataStorages.price[2]);
-                    return;
+                case "10k":
+                    price = weight * DataStorages.price[0];
+                    break;
+                case "18k":
+                    price = weight * DataStorages.price[1];
+                    break;
+                case "21k":
+                    price = weight * DataStorages.price[2];
+                    break;
             }
+
+            txtbPrice.Text = Convert.ToString(price);
         }
     }
 }

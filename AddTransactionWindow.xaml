@@ -37,7 +37,8 @@
             Style="{StaticResource MaterialDesignFloatingHintDatePicker}"
             Grid.Column="1" 
             Margin="36,5,10,15" 
-            Grid.Row="6" FontFamily="Swis721 Blk BT" />
+            Grid.Row="6" 
+            FontFamily="Swis721 BT" />
         <ComboBox
             materialDesign:HintAssist.Hint="Jewelry"
             Name="cmbProduct"
@@ -46,7 +47,10 @@
             Margin="36,6,12,18" 
             Grid.Row="1" 
             Height="40" 
-            FontFamily="Swis721 Blk BT">
+            FontFamily="Swis721 BT">
+            <ComboBox.Background>
+                <SolidColorBrush Color="#FFB7D6EC" Opacity="0.8"/>
+            </ComboBox.Background>
             <ComboBoxItem>
                 Bracelet
             </ComboBoxItem>
@@ -66,7 +70,9 @@
                VerticalAlignment="Top" 
                Grid.Row="5"
                Width="88" 
-               Height="28" Grid.Column="1" FontFamily="Swis721 Blk BT"/>
+               Height="28" 
+               Grid.Column="1" 
+               FontFamily="Swis721 BT"/>
         <TextBlock HorizontalAlignment="Right" 
                    Name="txtbPrice"
                    Margin="0,33,32,0" 
@@ -80,12 +86,18 @@
                    Background="White"/>
         <TextBox
              TextWrapping="Wrap"
+             Name="txtDetails"
              VerticalAlignment="Stretch"
              MinWidth="250"
              AcceptsReturn="True"
              VerticalScrollBarVisibility="Auto"
              SpellCheck.IsEnabled="True"
-             materialDesign:HintAssist.Hint="Other Details" Grid.Row="7" Grid.Column="1" Margin="10,3,73,0" Grid.ColumnSpan="2" FontFamily="Swis721 Blk BT"/>
+             materialDesign:HintAssist.Hint="Other Details" 
+            Grid.Row="7" 
+            Grid.Column="1" 
+            Margin="10,3,73,0" 
+            Grid.ColumnSpan="2" 
+            FontFamily="Swis721 BT"/>
         <Button
             Name="SaveTransaction"
             Style="{StaticResource MaterialDesignFlatButton}"
@@ -94,7 +106,8 @@
             Margin="0,20,10,9" 
             Grid.Row="9" 
             Foreground="#FF1000AC" 
-            Height="Auto" Grid.Column="1">
+            Height="Auto" 
+            Grid.Column="1">
             ACCEPT
 
         </Button>
@@ -106,7 +119,9 @@
                 VerticalAlignment="Top" 
                 Width="55" Height="30" 
                 Click="btnAddCustomer_Click" 
-                FontSize="12" BorderBrush="#FF240C4D" Background="#FF2032A2"
+                FontSize="12" 
+                BorderBrush="#FF240C4D" 
+                Background="#FF2032A2"
                 >
             <materialDesign:PackIcon
             Kind="PersonAddOutline"
@@ -119,9 +134,13 @@
                 HorizontalAlignment="Left" 
                 Margin="56,20,0,0" 
                 VerticalAlignment="Top" 
-                Width="55" Height="30" 
+                Width="55" 
+                Height="30" 
                 Click="BtnCalculatePrice_Click" 
-                FontSize="12" BorderBrush="#FF240C4D" Background="#FF2032A2" Grid.Row="5"
+                FontSize="12" 
+                BorderBrush="#FF240C4D" 
+                Background="#FF2032A2" 
+                Grid.Row="5"
                 >
             <materialDesign:PackIcon
             Kind="Calculator"
@@ -131,7 +150,16 @@
         <ComboBox
             materialDesign:HintAssist.Hint="Quality of Jewelry"
             Name="cmbQuality"
-            Style="{StaticResource MaterialDesignFloatingHintComboBox}" Grid.Column="1" Margin="36,13,10,11" Grid.Row="2" Height="40" FontFamily="Swis721 Blk BT">
+            Style="{StaticResource MaterialDesignFloatingHintComboBox}" 
+            Grid.Column="1" 
+            Margin="34,10,12,10" 
+            Grid.Row="2" 
+            Height="40" 
+            FontFamily="Swis721 BT"
+            BorderBrush="#89000000">
+            <ComboBox.Background>
+                <SolidColorBrush Color="#FFB7D6EC" Opacity="0.8"/>
+            </ComboBox.Background>
             <ComboBoxItem>
                 10k
             </ComboBoxItem>
@@ -148,7 +176,8 @@
             Style="{StaticResource MaterialDesignFloatingHintComboBox}" 
             Grid.Column="1" 
             Margin="36,14,12,10" 
-            Height="40" FontFamily="Swis721 Blk BT"/>
+            Height="40" 
+            FontFamily="Swis721 BT"/>
         <Label x:Name="txtCustomer_Copy" 
             Content="Add Customer" 
             HorizontalAlignment="Center" 
@@ -159,12 +188,13 @@
             Height="38" 
             Grid.Column="2" 
             Grid.RowSpan="2" 
-            FontWeight="Bold" FontFamily="Swis721 Blk BT"/>
+            FontWeight="Bold" 
+               FontFamily="Swis721 BT"/>
         <Image Margin="18,10,13,0" Source="customer.png" Stretch="Fill"/>
         <Image Margin="21,12,13,10" Source="Jewelry.png" Stretch="Fill" Grid.Row="1"/>
         <Image Margin="21,10,13,0" Source="Quality.png" Stretch="Fill" Grid.Row="2"/>
         <Image Margin="18,5,13,2" Grid.Row="6" Source="Date of Transaction.png" Stretch="Fill"/>
-        <Image Margin="10,9,13,0" Grid.Row="5" Source="Price.png" Stretch="Fill"/>
+        <Image Margin="0,10,14,59" Grid.Row="5" Source="Price.png" Stretch="Fill" HorizontalAlignment="Right" Width="61" Grid.RowSpan="2"/>
         <Image Margin="18,5,13,9" Grid.Row="3" Source="Weight.png" Stretch="Fill"/>
         <Image Margin="17,0,13,8" Grid.Row="4" Source="discount.png" Stretch="Fill"/>
         <Image Margin="17,10,13,0" Grid.Row="7" Source="details.png" Stretch="Fill"/>
@@ -173,14 +203,16 @@
             Name="txtWeight"
   Style="{StaticResource MaterialDesignFloatingHintTextBox}" 
             Grid.Column="1"
-            Margin="36,0,12,0" 
-            Grid.Row="3" FontFamily="Swis721 Blk BT" />
+            Margin="36,10,12,0" 
+            Grid.Row="3" 
+            FontFamily="Swis721 BT" />
         <TextBox
   materialDesign:HintAssist.Hint="Crystal Weight"
             Name="txtCrystalWeight"
   Style="{StaticResource MaterialDesignFloatingHintTextBox}"
             Grid.Column="1" 
             Margin="36,0,12,8" 
-            Grid.Row="4" FontFamily="Swis721 Blk BT" />
+            Grid.Row="4" 
+            FontFamily="Swis721 BT" />
     </Grid>
 </Window>

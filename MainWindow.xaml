@@ -6,12 +6,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:JewelryShop"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" 
+        Height="381.908" 
+        Width="329.276"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="None">
     <Grid>
         <Button x:Name="btnAddTransaction" 
                 Content="Add Transaction" 
                 HorizontalAlignment="Left" 
-                Margin="221,25,0,0" 
+                Margin="90,36,0,0" 
                 VerticalAlignment="Top" 
                 Width="136" 
                 Click="btnAddTransaction_Click" 
@@ -19,7 +23,7 @@
         <Button Content="Price Setter" 
                 Name="SetPrice"
                 HorizontalAlignment="Left" 
-                Margin="221,70,0,0" 
+                Margin="90,87,0,0" 
                 VerticalAlignment="Top"
                 Width="136" 
                 Click="SetPrice_Click"/>

@@ -35,7 +35,6 @@ namespace JewelryShop
             {
                 DataStorages.price.Add(prices[x]);
             }
-
             this.Close();
         }
     }

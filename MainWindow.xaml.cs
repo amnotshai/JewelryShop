@@ -47,6 +47,10 @@ namespace JewelryShop
     {
         public static List<string> buyer = new List<string>();
         public static List<decimal> price = new List<decimal>();
+        public static List<string> jewelry = new List<string>();
+        public static List<string> quality = new List<string>();
+        public static List<decimal> weight = new List<decimal>();
+        public static List<string> details = new List<string>();
 
     }
 }
