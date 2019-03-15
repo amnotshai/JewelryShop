@@ -11,21 +11,36 @@
         Width="329.276"
         WindowStartupLocation="CenterScreen"
         WindowStyle="None">
+    <Window.Background>
+        <ImageBrush ImageSource="abstract-2829961_960_720.png"/>
+    </Window.Background>
     <Grid>
         <Button x:Name="btnAddTransaction" 
                 Content="Add Transaction" 
                 HorizontalAlignment="Left" 
-                Margin="90,36,0,0" 
+                Margin="90,78,0,0" 
                 VerticalAlignment="Top" 
                 Width="136" 
                 Click="btnAddTransaction_Click" 
-                Height="29"/>
-        <Button Content="Price Setter" 
+                Height="29" 
+                Background="#FF4785F1"
+                BorderBrush="#FFBCCF66"/>
+        <Button Content="Set Price" 
                 Name="SetPrice"
                 HorizontalAlignment="Left" 
-                Margin="90,87,0,0" 
+                Margin="90,24,0,0" 
                 VerticalAlignment="Top"
                 Width="136" 
-                Click="SetPrice_Click"/>
+                Click="SetPrice_Click" 
+                Background="#FF4785F1" 
+                BorderBrush="#FFBCCF66"/>
+        <Button Content="Add Payment" 
+                HorizontalAlignment="Left"
+                Margin="90,130,0,0" 
+                VerticalAlignment="Top" 
+                Width="136" 
+                Click="AddPayment_Click"
+                Background="#FF4785F1"
+                BorderBrush="#FFBCCF66"/>
     </Grid>
 </Window>

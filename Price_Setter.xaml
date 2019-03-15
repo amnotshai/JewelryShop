@@ -10,6 +10,9 @@
         WindowStyle="None"
         WindowStartupLocation="CenterScreen"
         Width="232.141">
+    <Window.Background>
+        <ImageBrush ImageSource="purple-1862798_1280.jpg"/>
+    </Window.Background>
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
@@ -24,32 +27,38 @@
         </Grid.RowDefinitions>
         <Label Content="Set the Price for Quality " 
                HorizontalAlignment="Left" 
-               Margin="19,13,0,0" 
+               Margin="10,10,0,0" 
                VerticalAlignment="Top" 
                Height="36" 
-               Width="157" 
-               FontSize="14" Grid.ColumnSpan="2"/>
+               Width="163" 
+               FontSize="14" Grid.ColumnSpan="2" FontWeight="SemiBold" Foreground="#DDFFFFFF"/>
         <Label Content="10k" 
                HorizontalAlignment="Left" 
                Margin="19,10,0,0" 
                VerticalAlignment="Top" 
                Width="63" 
                Height="32" 
-               FontSize="14" Grid.Row="1"/>
+               FontSize="14" 
+               Grid.Row="1" 
+               Foreground="#DDC2ADF9"/>
         <Label Content="18k" 
                HorizontalAlignment="Left" 
                Margin="19,7,0,0" 
                VerticalAlignment="Top" 
                Width="63" 
                Height="32" 
-               FontSize="14" Grid.Row="2"/>
+               FontSize="14" 
+               Grid.Row="2" 
+               Foreground="#DDEA93FD"/>
         <Label Content="21k" 
                HorizontalAlignment="Left" 
                Margin="19,5,0,0" 
                VerticalAlignment="Top" 
                Width="63" 
                Height="32" 
-               FontSize="14" Grid.Row="3"/>
+               FontSize="14" 
+               Grid.Row="3" 
+               Foreground="#DDF0D5A7"/>
         <Button Content="Save" 
                 
                 HorizontalAlignment="Left" 
@@ -58,7 +67,7 @@
                 Width="75" 
                 Grid.ColumnSpan="2"
                 Grid.Row="4" 
-                Click="Save_Click"/>
+                Click="Save_Click" BorderBrush="#FFEEDB1D"/>
         <TextBox Grid.Column="1" 
                  Name="Txt10k"
                  HorizontalAlignment="Left" 
@@ -67,7 +76,9 @@
                  Grid.Row="1" 
                  TextWrapping="Wrap" 
                  VerticalAlignment="Top" 
-                 Width="76"/>
+                 Width="76" 
+                 Foreground="#FFA49BDE" 
+                 BorderBrush="#DDC2ADF9"/>
         <TextBox Grid.Column="1" 
                  Name="Txt18k"
                  HorizontalAlignment="Left" 
@@ -76,7 +87,9 @@
                  Grid.Row="2" 
                  TextWrapping="Wrap" 
                  VerticalAlignment="Top" 
-                 Width="76"/>
+                 Width="76" 
+                 BorderBrush="#DDEA93FD" 
+                 Foreground="#DDEA93FD"/>
         <TextBox Grid.Column="1" 
                  Name="Txt21k"
                  HorizontalAlignment="Left" 
@@ -85,7 +98,36 @@
                  Grid.Row="3" 
                  TextWrapping="Wrap" 
                  VerticalAlignment="Top" 
-                 Width="76"/>
+                 Width="76" 
+                 BorderBrush="#DDF0D5A7" 
+                 Foreground="#DDF0D5A7"/>
+        <TextBlock Grid.Column="1" 
+                   HorizontalAlignment="Left" 
+                   Margin="65,23,0,0" 
+                   Grid.Row="1" 
+                   TextWrapping="Wrap" 
+                   Text="Php" 
+                   VerticalAlignment="Top" 
+                   Height="16" 
+                   Foreground="#DDC2ADF9"/>
+        <TextBlock Grid.Column="1" 
+                   HorizontalAlignment="Left"
+                   Margin="65,23,0,0" 
+                   Grid.Row="2" 
+                   TextWrapping="Wrap" 
+                   Text="Php" 
+                   VerticalAlignment="Top" 
+                   Height="16" 
+                   Foreground="#DDEA93FD"/>
+        <TextBlock Grid.Column="1" 
+                   HorizontalAlignment="Left" 
+                   Margin="65,24,0,0" 
+                   Grid.Row="3" 
+                   TextWrapping="Wrap" 
+                   Text="Php" 
+                   VerticalAlignment="Top"
+                   Height="16" 
+                   Foreground="#DDF0D5A7"/>
 
     </Grid>
 </Window>

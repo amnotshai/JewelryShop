@@ -37,6 +37,12 @@ namespace JewelryShop
             Price_Setter Set = new Price_Setter();
             Set.Show();
         }
+
+        private void AddPayment_Click(object sender, RoutedEventArgs e)
+        {
+            PaymentWindow Pay = new PaymentWindow();
+            Pay.Show();
+        }
     }
     public class DataStorage
     {
