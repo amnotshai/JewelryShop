@@ -20,6 +20,7 @@ namespace JewelryShop
     public partial class AddCustomerWindow : Window
     {
         public DataStorage data;
+        
         public AddCustomerWindow()
         {
             InitializeComponent();
@@ -37,11 +38,28 @@ namespace JewelryShop
                 }
             }
             if (!exist)//if not exist add to storage
+            {
                 data.customers.Add(customer);
+
+                if(txtContactNumber.Text.Length==9)
+                {
+                    DataStorages.number.Add("+639" + txtContactNumber.Text);
+                   
+                    this.Close();
+
+                }
+                    
+                else
+                {
+                    MessageBox.Show("hahahaHa");
+                }
+            }
+
             else
                 MessageBox.Show("The name you have entered already exist in the system.");
 
-            this.Close();
+
         }
+        
     }
 }

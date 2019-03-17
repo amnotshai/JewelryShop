@@ -7,40 +7,32 @@
         xmlns:local="clr-namespace:JewelryShop"
         mc:Ignorable="d"
         Title="MainWindow" 
-        Height="381.908" 
-        Width="329.276"
+        Height="450" 
+        Width="600.5"
         WindowStartupLocation="CenterScreen"
         WindowStyle="None">
     <Window.Background>
-        <ImageBrush ImageSource="abstract-2829961_960_720.png"/>
+        <ImageBrush ImageSource="Images/abstract-2829961_960_720.png"/>
     </Window.Background>
     <Grid>
         <Button x:Name="btnAddTransaction" 
                 Content="Add Transaction" 
                 HorizontalAlignment="Left" 
-                Margin="90,78,0,0" 
+                Margin="206,212,0,0" 
                 VerticalAlignment="Top" 
-                Width="136" 
+                Width="186" 
                 Click="btnAddTransaction_Click" 
-                Height="29" 
+                Height="64" 
                 Background="#FF4785F1"
                 BorderBrush="#FFBCCF66"/>
         <Button Content="Set Price" 
                 Name="SetPrice"
                 HorizontalAlignment="Left" 
-                Margin="90,24,0,0" 
+                Margin="206,102,0,0" 
                 VerticalAlignment="Top"
-                Width="136" 
+                Width="186" 
                 Click="SetPrice_Click" 
                 Background="#FF4785F1" 
-                BorderBrush="#FFBCCF66"/>
-        <Button Content="Add Payment" 
-                HorizontalAlignment="Left"
-                Margin="90,130,0,0" 
-                VerticalAlignment="Top" 
-                Width="136" 
-                Click="AddPayment_Click"
-                Background="#FF4785F1"
-                BorderBrush="#FFBCCF66"/>
+                BorderBrush="#FFBCCF66" Height="71"/>
     </Grid>
 </Window>

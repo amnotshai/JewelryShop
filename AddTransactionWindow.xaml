@@ -7,13 +7,13 @@
         xmlns:local="clr-namespace:JewelryShop"
         mc:Ignorable="d"
         Title="AddTransactionWindow" 
-        Height="545.83" 
-        Width="509.363"
+        Height="486" 
+        Width="600.5"
         WindowStartupLocation="CenterScreen"
         WindowStyle="None"
         Activated="Window_Activated">
     <Window.Background>
-        <ImageBrush ImageSource="heypik-simplified-geometric-background-template_27665531.jpg"/>
+        <ImageBrush ImageSource="Images/gray-triangle-patterned-white-background_53876-86390.jpg"/>
     </Window.Background>
     <Grid>
         <Grid.ColumnDefinitions>
@@ -32,24 +32,29 @@
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
+        <Grid Grid.RowSpan="9" 
+              Background="#FFC7C4C4">
+
+        </Grid>
         <DatePicker
             materialDesign:HintAssist.Hint="Pick Date of Transaction"
+            Name="TransactDate"
             Style="{StaticResource MaterialDesignFloatingHintDatePicker}"
             Grid.Column="1" 
-            Margin="36,5,10,15" 
+            Margin="34,3,12,2" 
             Grid.Row="6" 
-            FontFamily="Swis721 BT" />
+            FontFamily="Swis721 BT" Background="White" />
         <ComboBox
             materialDesign:HintAssist.Hint="Jewelry"
             Name="cmbProduct"
             Style="{StaticResource MaterialDesignFloatingHintComboBox}" 
             Grid.Column="1" 
-            Margin="36,6,12,18" 
+            Margin="36,5,12,0" 
             Grid.Row="1" 
-            Height="40" 
+            Height="48" 
             FontFamily="Swis721 BT">
             <ComboBox.Background>
-                <SolidColorBrush Color="#FF58ECA9" Opacity="0.8"/>
+                <SolidColorBrush Color="White" Opacity="0.8"/>
             </ComboBox.Background>
             <ComboBoxItem>
                 Bracelet
@@ -66,7 +71,7 @@
         </ComboBox>
         <Label Content="Price" 
                HorizontalAlignment="Center" 
-               Margin="10,0,142,0" 
+               Margin="13,0,184,0" 
                VerticalAlignment="Top" 
                Grid.Row="5"
                Width="88" 
@@ -75,11 +80,11 @@
                FontFamily="Swis721 BT"/>
         <TextBlock HorizontalAlignment="Right" 
                    Name="txtbPrice"
-                   Margin="0,33,32,0" 
+                   Margin="0,18,37,0" 
                    TextWrapping="Wrap" 
                    Text="" 
                    VerticalAlignment="Top" 
-                   Width="156" 
+                   Width="193" 
                    Height="29" 
                    Grid.Column="1" 
                    Grid.Row="5" 
@@ -95,19 +100,18 @@
              materialDesign:HintAssist.Hint="Other Details" 
             Grid.Row="7" 
             Grid.Column="1" 
-            Margin="10,3,73,0" 
-            Grid.ColumnSpan="2" 
-            FontFamily="Swis721 BT"/>
+            Margin="10,10,10,0" 
+            FontFamily="Swis721 BT" Background="#FFFFFDFD"/>
         <Button
             Name="SaveTransaction"
             Style="{StaticResource MaterialDesignFlatButton}"
             Click="btnAccept_Click"
             ToolTip="MaterialDesignFlatButton" 
-            Margin="0,20,10,9" 
-            Grid.Row="9" 
+            Margin="13,10,10,10" 
+            Grid.Row="8" 
             Foreground="#FF1000AC" 
             Height="Auto" 
-            Grid.Column="1">
+            Grid.Column="1" Background="#FFDADADA">
             ACCEPT
 
         </Button>
@@ -115,35 +119,16 @@
                 Name="btnAddCustomer"
                 Grid.Column="2"
                 HorizontalAlignment="Left" 
-                Margin="56,10,0,0" 
+                Margin="58,9,0,0" 
                 VerticalAlignment="Top" 
                 Width="55" Height="30" 
                 Click="btnAddCustomer_Click" 
                 FontSize="12" 
                 BorderBrush="#FF240C4D" 
-                Background="#FF2032A2"
+                Background="#FFB8B8B8"
                 >
             <materialDesign:PackIcon
             Kind="PersonAddOutline"
-            Height="24"
-            Width="24" />
-        </Button>
-        <Button 
-                Name="btnCalculatePrice"
-                Grid.Column="2"
-                HorizontalAlignment="Left" 
-                Margin="56,10,0,0" 
-                VerticalAlignment="Top" 
-                Width="55" 
-                Height="30" 
-                Click="BtnCalculatePrice_Click" 
-                FontSize="12" 
-                BorderBrush="#FF240C4D" 
-                Background="#FF2032A2" 
-                Grid.Row="5"
-                >
-            <materialDesign:PackIcon
-            Kind="Calculator"
             Height="24"
             Width="24" />
         </Button>
@@ -152,13 +137,13 @@
             Name="cmbQuality"
             Style="{StaticResource MaterialDesignFloatingHintComboBox}" 
             Grid.Column="1" 
-            Margin="34,10,12,10" 
+            Margin="34,0,12,0" 
             Grid.Row="2" 
-            Height="40" 
+            Height="53" 
             FontFamily="Swis721 BT"
             BorderBrush="#89000000" Foreground="Black">
             <ComboBox.Background>
-                <SolidColorBrush Color="#FF78F1C0" Opacity="0.8"/>
+                <SolidColorBrush Color="White" Opacity="0.8"/>
             </ComboBox.Background>
             <ComboBoxItem>
                 10k
@@ -175,60 +160,49 @@
             Name="cmbCustomers"
             Style="{StaticResource MaterialDesignFloatingHintComboBox}" 
             Grid.Column="1" 
-            Margin="36,14,12,10" 
-            Height="40" 
-            FontFamily="Swis721 BT" Foreground="Black">
+            Margin="36,0,12,3" 
+            Height="46" 
+            FontFamily="Swis721 BT" Foreground="#FF060606" BorderBrush="#89000000">
             <ComboBox.Background>
-                <SolidColorBrush Color="#FF8EF3AA" Opacity="0.75"/>
+                <SolidColorBrush Color="White" Opacity="0.75"/>
             </ComboBox.Background>
         </ComboBox>
         <Label x:Name="txtCustomer_Copy" 
             Content="Add Customer" 
             HorizontalAlignment="Center" 
-            Margin="37,40,25,50" 
+            Margin="45,42,61,18" 
             VerticalAlignment="Center" 
             RenderTransformOrigin="0.45,0.47" 
-            Width="105" 
+            Width="92" 
             Height="38" 
             Grid.Column="2" 
             Grid.RowSpan="2" 
             FontWeight="Bold" 
                FontFamily="Swis721 BT"/>
-        <Image Margin="18,10,13,0" Source="customer.png" Stretch="Fill"/>
-        <Image Margin="21,12,13,10" Source="Jewelry.png" Stretch="Fill" Grid.Row="1"/>
-        <Image Margin="21,10,13,0" Source="Quality.png" Stretch="Fill" Grid.Row="2"/>
-        <Image Margin="18,5,13,2" Grid.Row="6" Source="Date of Transaction.png" Stretch="Fill"/>
-        <Image Margin="0,10,14,59" Grid.Row="5" Source="Price.png" Stretch="Fill" HorizontalAlignment="Right" Width="61" Grid.RowSpan="2"/>
-        <Image Margin="18,5,13,9" Grid.Row="3" Source="Weight.png" Stretch="Fill"/>
-        <Image Margin="17,0,13,8" Grid.Row="4" Source="discount.png" Stretch="Fill"/>
-        <Image Margin="17,10,13,0" Grid.Row="7" Source="details.png" Stretch="Fill"/>
+        <Image Margin="34,6,19,3" Source="Images/customer.png" Stretch="Fill"/>
+        <Image Margin="34,10,13,10" Source="Images/Jewelry.png" Stretch="Fill" Grid.Row="1"/>
+        <Image Margin="29,10,19,0" Source="Images/Quality.png" Stretch="Fill" Grid.Row="2"/>
+        <Image Margin="29,3,24,2" Grid.Row="6" Source="Images/Date of Transaction.png" Stretch="Fill"/>
+        <Image Margin="0,5,14,2" Grid.Row="5" Source="Images/Price.png" Stretch="Fill" HorizontalAlignment="Right" Width="67"/>
+        <Image Margin="28,5,19,9" Grid.Row="3" Source="Images/Weight.png" Stretch="Fill"/>
+        <Image Margin="28,0,13,0" Grid.Row="4" Source="Images/discount.png" Stretch="Fill"/>
+        <Image Margin="28,3,13,0" Grid.Row="7" Source="Images/details.png" Stretch="Fill"/>
         <TextBox
   materialDesign:HintAssist.Hint="Weight"
             Name="txtWeight"
   Style="{StaticResource MaterialDesignFloatingHintTextBox}" 
             Grid.Column="1"
-            Margin="36,10,12,0" 
+            Margin="36,0,12,0" 
             Grid.Row="3" 
-            FontFamily="Swis721 BT" />
+            FontFamily="Swis721 BT" Background="White" />
         <TextBox
-  materialDesign:HintAssist.Hint="Crystal Weight"
-            Name="txtCrystalWeight"
+  materialDesign:HintAssist.Hint="Discount"
+            Name="txtDiscount"
   Style="{StaticResource MaterialDesignFloatingHintTextBox}"
             Grid.Column="1" 
-            Margin="36,0,12,8" 
+            Margin="36,0,12,0" 
             Grid.Row="4" 
-            FontFamily="Swis721 BT" />
-        <Label x:Name="txtCustomer_Copy1" 
-            Content="Calculate Price" 
-            HorizontalAlignment="Center" 
-            Margin="37,40,25,42" 
-            VerticalAlignment="Center" 
-            RenderTransformOrigin="0.45,0.47" 
-            Width="106" 
-            Height="38" 
-            Grid.Column="2" 
-            Grid.RowSpan="2" 
-            FontWeight="Bold" 
-            FontFamily="Swis721 BT" Grid.Row="5"/>
+            FontFamily="Swis721 BT" 
+            TextChanged="TxtCrystalWeight_TextChanged" Background="White" />
     </Grid>
 </Window>

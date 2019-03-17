@@ -22,13 +22,25 @@ namespace JewelryShop
         public PaymentWindow()
         {
             InitializeComponent();
-            listTransaction.Items.Add(DataStorages.buyer[0]);
+            
         }
 
         private void Window_Activated(object sender, EventArgs e)
         {
-            listTransaction.Items.Add(DataStorages.buyer[0]);
+            txtbName.Text =Convert.ToString( DataStorages.transaction[Counter.Count].Customer);
 
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            
+            decimal loanedAmount = DataStorages.transaction[Counter.Count].AmountLoan;
+            decimal payment = Convert.ToDecimal(txtPayment.Text);
+            decimal newValue = loanedAmount - payment;
+
+            DataStorages.transaction[Counter.Count].AmountLoan = newValue;
+
+            this.Close();
         }
     }
 }

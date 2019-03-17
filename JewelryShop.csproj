@@ -61,6 +61,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="TransactionHistory.cs" />
+    <Compile Include="TransactionWindow.xaml.cs">
+      <DependentUpon>TransactionWindow.xaml</DependentUpon>
+    </Compile>
     <Page Include="AddCustomerWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -92,6 +96,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Price_Setter.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TransactionWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -131,58 +139,59 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="geometry-background.png" />
+    <Resource Include="Images\geometry-background.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="customer.png" />
+    <Resource Include="Images\customer.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Jewelry.png" />
+    <Resource Include="Images\Jewelry.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Quality.png" />
+    <Resource Include="Images\Quality.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Weight.png" />
+    <Resource Include="Images\Weight.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="discount.png" />
+    <Resource Include="Images\discount.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Price.png" />
+    <Resource Include="Images\Price.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Date of Transaction.png" />
+    <Resource Include="Images\Date of Transaction.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="details.png" />
+    <Resource Include="Images\details.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Microsoft_Tips_icon.png" />
+    <Resource Include="Images\Microsoft_Tips_icon.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="geometric_pattern_png_557255.png" />
+    <Resource Include="Images\geometric_pattern_png_557255.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="abstract-2829961_960_720.png" />
+    <Resource Include="Images\abstract-2829961_960_720.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="gray-triangle-patterned-white-background_53876-86390.jpg" />
+    <Resource Include="Images\gray-triangle-patterned-white-background_53876-86390.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="purple-1862798_1280.jpg" />
+    <Resource Include="Images\purple-1862798_1280.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="49403480-orange-and-blue-wallpaper.png" />
+    <Resource Include="Images\49403480-orange-and-blue-wallpaper.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="heypik-simplified-geometric-background-template_27665531.jpg" />
+    <Resource Include="Images\heypik-simplified-geometric-background-template_27665531.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="cool-geometric-designs-icy-polygonal-geometric-design-geometric-designs-png.jpg" />
+    <Resource Include="Images\cool-geometric-designs-icy-polygonal-geometric-design-geometric-designs-png.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="vector-geometric-pattern-art-patterns-rative-islamic-design.jpg" />
+    <Resource Include="Images\vector-geometric-pattern-art-patterns-rative-islamic-design.jpg" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

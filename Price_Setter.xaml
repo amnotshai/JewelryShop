@@ -6,12 +6,13 @@
         xmlns:local="clr-namespace:JewelryShop"
         mc:Ignorable="d"
         Title="Price_Setter" 
-         Height="275.023" 
+         Height="450" 
+        Width="600.5" 
         WindowStyle="None"
         WindowStartupLocation="CenterScreen"
-        Width="232.141">
+        >
     <Window.Background>
-        <ImageBrush ImageSource="purple-1862798_1280.jpg"/>
+        <ImageBrush ImageSource="Images/purple-1862798_1280.jpg"/>
     </Window.Background>
     <Grid>
         <Grid.ColumnDefinitions>
@@ -29,105 +30,105 @@
                HorizontalAlignment="Left" 
                Margin="10,10,0,0" 
                VerticalAlignment="Top" 
-               Height="36" 
-               Width="163" 
-               FontSize="14" Grid.ColumnSpan="2" FontWeight="SemiBold" Foreground="#DDFFFFFF"/>
+               Height="68" 
+               Width="400" 
+               FontSize="36" FontWeight="SemiBold" Foreground="#DDFFFFFF" Grid.ColumnSpan="2"/>
         <Label Content="10k" 
                HorizontalAlignment="Left" 
-               Margin="19,10,0,0" 
+               Margin="45,5,0,0" 
                VerticalAlignment="Top" 
-               Width="63" 
-               Height="32" 
-               FontSize="14" 
+               Width="105" 
+               Height="68" 
+               FontSize="36" 
                Grid.Row="1" 
                Foreground="#DDC2ADF9"/>
         <Label Content="18k" 
                HorizontalAlignment="Left" 
-               Margin="19,7,0,0" 
+               Margin="45,3,0,0" 
                VerticalAlignment="Top" 
-               Width="63" 
-               Height="32" 
-               FontSize="14" 
+               Width="105" 
+               Height="72" 
+               FontSize="36" 
                Grid.Row="2" 
                Foreground="#DDEA93FD"/>
         <Label Content="21k" 
                HorizontalAlignment="Left" 
-               Margin="19,5,0,0" 
+               Margin="45,5,0,0" 
                VerticalAlignment="Top" 
-               Width="63" 
-               Height="32" 
-               FontSize="14" 
+               Width="105" 
+               Height="73" 
+               FontSize="36" 
                Grid.Row="3" 
                Foreground="#DDF0D5A7"/>
         <Button Content="Save" 
                 
                 HorizontalAlignment="Left" 
-                Margin="75,10,0,0" 
+                Margin="258,10,0,0" 
                 VerticalAlignment="Top" 
-                Width="75" 
+                Width="88" 
                 Grid.ColumnSpan="2"
                 Grid.Row="4" 
-                Click="Save_Click" BorderBrush="#FFEEDB1D"/>
+                Click="Save_Click" BorderBrush="#FFEEDB1D" RenderTransformOrigin="1.407,0.971" Height="69" FontSize="22"/>
         <TextBox Grid.Column="1" 
                  Name="Txt10k"
                  HorizontalAlignment="Left" 
-                 Height="34" 
+                 Height="68" 
                  Margin="10,5,0,0" 
                  Grid.Row="1" 
                  TextWrapping="Wrap" 
                  VerticalAlignment="Top" 
-                 Width="76" 
+                 Width="259" 
                  Foreground="#FFA49BDE" 
-                 BorderBrush="#DDC2ADF9"/>
+                 BorderBrush="#DDC2ADF9" FontSize="36"/>
         <TextBox Grid.Column="1" 
                  Name="Txt18k"
                  HorizontalAlignment="Left" 
-                 Height="34" 
+                 Height="72" 
                  Margin="10,7,0,0" 
                  Grid.Row="2" 
                  TextWrapping="Wrap" 
                  VerticalAlignment="Top" 
-                 Width="76" 
+                 Width="259" 
                  BorderBrush="#DDEA93FD" 
-                 Foreground="#DDEA93FD"/>
+                 Foreground="#DDEA93FD" FontSize="36"/>
         <TextBox Grid.Column="1" 
                  Name="Txt21k"
                  HorizontalAlignment="Left" 
-                 Height="34" 
+                 Height="70" 
                  Margin="10,8,0,0" 
                  Grid.Row="3" 
                  TextWrapping="Wrap" 
                  VerticalAlignment="Top" 
-                 Width="76" 
+                 Width="259" 
                  BorderBrush="#DDF0D5A7" 
-                 Foreground="#DDF0D5A7"/>
+                 Foreground="#DDF0D5A7" FontSize="36"/>
         <TextBlock Grid.Column="1" 
                    HorizontalAlignment="Left" 
-                   Margin="65,23,0,0" 
+                   Margin="204,10,0,0" 
                    Grid.Row="1" 
                    TextWrapping="Wrap" 
                    Text="Php" 
                    VerticalAlignment="Top" 
-                   Height="16" 
-                   Foreground="#DDC2ADF9"/>
+                   Height="63" 
+                   Foreground="#DDC2ADF9" Width="65" FontSize="36"/>
         <TextBlock Grid.Column="1" 
                    HorizontalAlignment="Left"
-                   Margin="65,23,0,0" 
+                   Margin="204,23,0,0" 
                    Grid.Row="2" 
                    TextWrapping="Wrap" 
                    Text="Php" 
                    VerticalAlignment="Top" 
-                   Height="16" 
-                   Foreground="#DDEA93FD"/>
+                   Height="52" 
+                   Foreground="#DDEA93FD" FontSize="36" Width="65"/>
         <TextBlock Grid.Column="1" 
                    HorizontalAlignment="Left" 
-                   Margin="65,24,0,0" 
+                   Margin="202,24,0,0" 
                    Grid.Row="3" 
                    TextWrapping="Wrap" 
                    Text="Php" 
                    VerticalAlignment="Top"
-                   Height="16" 
-                   Foreground="#DDF0D5A7"/>
+                   Height="64" 
+                   Foreground="#DDF0D5A7" FontSize="36" Width="67"/>
 
     </Grid>
 </Window>

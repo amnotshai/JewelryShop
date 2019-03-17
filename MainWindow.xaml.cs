@@ -20,16 +20,17 @@ namespace JewelryShop
     /// </summary>
     public partial class MainWindow : Window
     {
-        DataStorage data = new DataStorage();
+        
         public MainWindow()
         {
             InitializeComponent();
         }
         private void btnAddTransaction_Click(object sender, RoutedEventArgs e)
         {
-            AddTransactionWindow AddTransaction = new AddTransactionWindow();
-            AddTransaction.data = data;
-            AddTransaction.Show();
+
+            TransactionWindow TransactionHistory = new TransactionWindow();
+            TransactionHistory.Show();
+
         }
 
         private void SetPrice_Click(object sender, RoutedEventArgs e)
@@ -37,26 +38,21 @@ namespace JewelryShop
             Price_Setter Set = new Price_Setter();
             Set.Show();
         }
-
-        private void AddPayment_Click(object sender, RoutedEventArgs e)
-        {
-            PaymentWindow Pay = new PaymentWindow();
-            Pay.Show();
-        }
+    
     }
     public class DataStorage
     {
         public List<Person> customers = new List<Person>();
-
+        
     }
     public static class DataStorages
     {
         public static List<string> buyer = new List<string>();
         public static List<decimal> price = new List<decimal>();
-        public static List<string> jewelry = new List<string>();
-        public static List<string> quality = new List<string>();
-        public static List<decimal> weight = new List<decimal>();
-        public static List<string> details = new List<string>();
+        public static List<int> index = new List<int>();
+        public static List<string> number = new List<string>();
+        public static List<TransactionHistory> transaction = new List<TransactionHistory>();
+
 
     }
 }

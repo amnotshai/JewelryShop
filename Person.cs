@@ -15,8 +15,8 @@ namespace JewelryShop
         public string LastName;
         public string BirthDate;
         public string Address;
-
-        public Person(string firstName, string lastName, string middleName = " ")
+        public string MobileNumber;
+        public Person(string firstName, string lastName,string middleName = " ")
         {
             FirstName = firstName;
             LastName = lastName;
@@ -27,6 +27,7 @@ namespace JewelryShop
         {
             return ConvertFirstName() + " " + Convert.ToString(MiddleInitial[0]).ToUpper() + ". " + ConvertLastName();
         }
+
         public string ConvertFirstName()
         {
             TextInfo currentTextInfo = new CultureInfo("en-US", false).TextInfo;

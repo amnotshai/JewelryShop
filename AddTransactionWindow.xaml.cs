@@ -19,12 +19,12 @@ namespace JewelryShop
     /// </summary>
     public partial class AddTransactionWindow : Window
     {
-        public MainWindow main = new MainWindow();
+        
         public string name = "";
         public decimal price;
         public DataStorage data;
         public Person customer;
-        public decimal weight;
+        public decimal discount;
         
 
         public AddTransactionWindow()
@@ -35,6 +35,7 @@ namespace JewelryShop
         {   
 
             cmbCustomers.Items.Clear();
+
             for(int x=0;x<DataStorages.buyer.Count;x++)
             {
                 cmbCustomers.Items.Add(DataStorages.buyer[x]);
@@ -49,13 +50,18 @@ namespace JewelryShop
 
         private void btnAccept_Click(object sender, RoutedEventArgs e)
         {
+            TransactionHistory transact = new TransactionHistory();
+            transact.Customer = cmbCustomers.Text;
+            transact.Jewelry = cmbProduct.Text;
+            transact.Quality = cmbQuality.Text;
+            transact.Weight = Convert.ToDecimal(txtWeight.Text);
+            transact.Price = txtbPrice.Text;
+            transact.AmountLoan = Convert.ToDecimal(txtbPrice.Text);
+            transact.DateOfTransaction = Convert.ToString(TransactDate.Text);
+            transact.Details = txtDetails.Text;
 
-            main.Show();
-            DataStorages.jewelry.Add(cmbProduct.Text);
-            DataStorages.quality.Add(cmbQuality.Text);
-            DataStorages.weight.Add(weight);
-            DataStorages.details.Add(txtDetails.Text);
-            DataStorages.price.Add(Convert.ToDecimal(txtbPrice.Text));
+            DataStorages.transaction.Add(transact);
+            
             this.Hide();
         }
 
@@ -66,27 +72,28 @@ namespace JewelryShop
             AddCustomerWindow newCustomer = new AddCustomerWindow();
             newCustomer.data = data;
             newCustomer.Show();
-            DataStorages.buyer.Add(cmbCustomers.Text);
+            //DataStorages.buyer.Add(cmbCustomers.Text);
         }
 
-        private void BtnCalculatePrice_Click(object sender, RoutedEventArgs e)
+        private void TxtCrystalWeight_TextChanged(object sender, TextChangedEventArgs e)
         {
-           
-            weight = Convert.ToDecimal(txtWeight.Text) - Convert.ToDecimal(txtCrystalWeight.Text);
             switch (cmbQuality.Text)
             {
                 case "10k":
-                    price = weight * DataStorages.price[0];
+                    discount = DataStorages.price[0] * (Convert.ToDecimal(txtDiscount.Text)/100);
+                    price = (DataStorages.price[0]*Convert.ToDecimal(txtWeight.Text))-(Convert.ToDecimal(txtWeight.Text)*discount);
                     break;
                 case "18k":
-                    price = weight * DataStorages.price[1];
+                    discount = DataStorages.price[1] * (Convert.ToDecimal(txtDiscount.Text) / 100);
+                    price = (DataStorages.price[1] * Convert.ToDecimal(txtWeight.Text)) - (Convert.ToDecimal(txtWeight.Text) * discount);
                     break;
                 case "21k":
-                    price = weight * DataStorages.price[2];
+                    discount = DataStorages.price[2] * (Convert.ToDecimal(txtDiscount.Text) / 100);
+                    price = (DataStorages.price[2] * Convert.ToDecimal(txtWeight.Text)) - (Convert.ToDecimal(txtWeight.Text) * discount);
                     break;
             }
 
-            txtbPrice.Text = Convert.ToString(price);
+            txtbPrice.Text =Convert.ToString(price);
         }
     }
 }
