@@ -35,18 +35,12 @@ namespace JewelryShop
             AddTransaction.Show();
         }
 
-        
-
-
-
         private void Window_Activated(object sender, EventArgs e)
         {
             dgTransactionHistory.Items.Clear();
             for (int x = 0; x < DataStorages.transaction.Count; x++)
             {
                 dgTransactionHistory.Items.Add(DataStorages.transaction[x]);
-
-
             }
         }
 

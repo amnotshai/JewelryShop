@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="TransactionWindow"
         Height="450" 
-        Width="600.5"
+        Width="750.5"
         WindowStyle="None"
         WindowStartupLocation="CenterScreen"
         Activated="Window_Activated">
@@ -23,21 +23,22 @@
                   Height="344" 
                   Margin="10,10,0,0" 
                   VerticalAlignment="Top"
-                  Width="572"
+                  Width="724"
                   Name="dgTransactionHistory">
 
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Name" Binding="{Binding Customer}" Width="200"/>
+                <DataGridTextColumn Header="Name" Binding="{Binding Customer}" Width="150"/>
                 <DataGridTextColumn Header="Product" Binding="{Binding Jewelry}"/>
                 <DataGridTextColumn Header="Actual Value" Binding="{Binding Price}"/>
-                <DataGridTextColumn Header="Amount Loan" Binding="{Binding AmountLoan}"/>
-                <DataGridTextColumn Header="Date" Binding="{Binding DateOfTransaction}" Width="150"/>
+                <DataGridTextColumn Header="Product Quality" Binding="{Binding Quality}"/>
+                <DataGridTextColumn Header="Loaned Amount" Binding="{Binding AmountToBePayed}"/>
+                <DataGridTextColumn Header="Transaction Date" Binding="{Binding DateOfTransaction}" Width="150"/>
             </DataGrid.Columns>
 
         </DataGrid>
         <Button Content="Add Payment" 
                 HorizontalAlignment="Left" 
-                Margin="337,382,0,0" 
+                Margin="444,378,0,0" 
                 VerticalAlignment="Top" 
                 Width="131" 
                 Click="Payment_Click"/>

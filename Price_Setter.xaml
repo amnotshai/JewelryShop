@@ -25,6 +25,8 @@
             <RowDefinition/>
             <RowDefinition/>
             <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
         </Grid.RowDefinitions>
         <Label Content="Set the Price for Quality " 
                HorizontalAlignment="Left" 
@@ -39,7 +41,7 @@
                VerticalAlignment="Top" 
                Width="105" 
                Height="68" 
-               FontSize="36" 
+               FontSize="30" 
                Grid.Row="1" 
                Foreground="#DDC2ADF9"/>
         <Label Content="18k" 
@@ -48,7 +50,7 @@
                VerticalAlignment="Top" 
                Width="105" 
                Height="72" 
-               FontSize="36" 
+               FontSize="30" 
                Grid.Row="2" 
                Foreground="#DDEA93FD"/>
         <Label Content="21k" 
@@ -57,51 +59,51 @@
                VerticalAlignment="Top" 
                Width="105" 
                Height="73" 
-               FontSize="36" 
+               FontSize="30" 
                Grid.Row="3" 
                Foreground="#DDF0D5A7"/>
         <Button Content="Save" 
                 
                 HorizontalAlignment="Left" 
-                Margin="258,10,0,0" 
+                Margin="252,0,0,0" 
                 VerticalAlignment="Top" 
                 Width="88" 
                 Grid.ColumnSpan="2"
-                Grid.Row="4" 
-                Click="Save_Click" BorderBrush="#FFEEDB1D" RenderTransformOrigin="1.407,0.971" Height="69" FontSize="22"/>
+                Grid.Row="6" 
+                Click="Save_Click" BorderBrush="#FFEEDB1D" RenderTransformOrigin="1.407,0.971" Height="53" FontSize="22"/>
         <TextBox Grid.Column="1" 
                  Name="Txt10k"
                  HorizontalAlignment="Left" 
-                 Height="68" 
+                 Height="48" 
                  Margin="10,5,0,0" 
                  Grid.Row="1" 
                  TextWrapping="Wrap" 
                  VerticalAlignment="Top" 
                  Width="259" 
                  Foreground="#FFA49BDE" 
-                 BorderBrush="#DDC2ADF9" FontSize="36"/>
+                 BorderBrush="#DD000000" FontSize="30"/>
         <TextBox Grid.Column="1" 
                  Name="Txt18k"
                  HorizontalAlignment="Left" 
-                 Height="72" 
+                 Height="46" 
                  Margin="10,7,0,0" 
                  Grid.Row="2" 
                  TextWrapping="Wrap" 
                  VerticalAlignment="Top" 
                  Width="259" 
-                 BorderBrush="#DDEA93FD" 
-                 Foreground="#DDEA93FD" FontSize="36"/>
+                 BorderBrush="#DD000000" 
+                 Foreground="#DDEA93FD" FontSize="30"/>
         <TextBox Grid.Column="1" 
                  Name="Txt21k"
                  HorizontalAlignment="Left" 
-                 Height="70" 
+                 Height="45" 
                  Margin="10,8,0,0" 
                  Grid.Row="3" 
                  TextWrapping="Wrap" 
                  VerticalAlignment="Top" 
                  Width="259" 
-                 BorderBrush="#DDF0D5A7" 
-                 Foreground="#DDF0D5A7" FontSize="36"/>
+                 BorderBrush="#DD000000" 
+                 Foreground="#DDF0D5A7" FontSize="30"/>
         <TextBlock Grid.Column="1" 
                    HorizontalAlignment="Left" 
                    Margin="204,10,0,0" 
@@ -110,25 +112,71 @@
                    Text="Php" 
                    VerticalAlignment="Top" 
                    Height="63" 
-                   Foreground="#DDC2ADF9" Width="65" FontSize="36"/>
+                   Foreground="#DDC2ADF9" Width="65" FontSize="30"/>
         <TextBlock Grid.Column="1" 
                    HorizontalAlignment="Left"
-                   Margin="204,23,0,0" 
+                   Margin="202,11,0,0" 
                    Grid.Row="2" 
                    TextWrapping="Wrap" 
                    Text="Php" 
                    VerticalAlignment="Top" 
                    Height="52" 
-                   Foreground="#DDEA93FD" FontSize="36" Width="65"/>
+                   Foreground="#DDEA93FD" FontSize="30" Width="65"/>
         <TextBlock Grid.Column="1" 
                    HorizontalAlignment="Left" 
-                   Margin="202,24,0,0" 
+                   Margin="202,8,0,0" 
                    Grid.Row="3" 
                    TextWrapping="Wrap" 
                    Text="Php" 
                    VerticalAlignment="Top"
                    Height="64" 
-                   Foreground="#DDF0D5A7" FontSize="36" Width="67"/>
+                   Foreground="#DDF0D5A7" 
+                   FontSize="30" 
+                   Width="67" 
+                   Grid.RowSpan="2"/>
+        <Label Content="Set Interest Rate" 
+               HorizontalAlignment="Left" 
+               Margin="10,0,0,0" 
+               Grid.Row="4" 
+               VerticalAlignment="Top" 
+               Width="276" 
+               Height="53" 
+               FontSize="36" 
+               Foreground="#DDFFFFFF"/>
+        <Label Content="Interest Rate" 
+            HorizontalAlignment="Left" 
+            Margin="10,6,0,0" 
+            Grid.Row="5" 
+            VerticalAlignment="Top" 
+            Width="276" 
+            Height="53" 
+            FontSize="36" 
+            Foreground="#DDFFFFFF"/>
+        <TextBox Grid.Column="1" 
+                 Name="txtInterest"
+                 HorizontalAlignment="Left" 
+                 Height="48" 
+                 Margin="10,6,0,0" 
+                 Grid.Row="5" 
+                 TextWrapping="Wrap" 
+                 VerticalAlignment="Top" 
+                 Width="259" 
+                 Background="#00000000" 
+                 BorderBrush="#89000000" 
+                 Foreground="#FFFBFBFB" 
+                 FontSize="30"/>
+        <TextBlock Grid.Column="1" 
+            HorizontalAlignment="Left" 
+            Margin="204,10,0,0" 
+            Grid.Row="5" 
+            TextWrapping="Wrap" 
+            Text="%" 
+            VerticalAlignment="Top"
+            Height="64" 
+            Foreground="#DDF0D5A7"
+            FontSize="30" 
+            Width="67" 
+            Grid.RowSpan="2"/>
 
     </Grid>
 </Window>

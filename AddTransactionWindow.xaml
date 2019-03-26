@@ -88,7 +88,8 @@
                    Height="29" 
                    Grid.Column="1" 
                    Grid.Row="5" 
-                   Background="White"/>
+                   Background="White"
+                   />
         <TextBox
              TextWrapping="Wrap"
              Name="txtDetails"
@@ -101,7 +102,9 @@
             Grid.Row="7" 
             Grid.Column="1" 
             Margin="10,10,10,0" 
-            FontFamily="Swis721 BT" Background="#FFFFFDFD"/>
+            FontFamily="Swis721 BT" 
+            Background="#FFFFFDFD" 
+            />
         <Button
             Name="SaveTransaction"
             Style="{StaticResource MaterialDesignFlatButton}"
@@ -111,7 +114,8 @@
             Grid.Row="8" 
             Foreground="#FF1000AC" 
             Height="Auto" 
-            Grid.Column="1" Background="#FFDADADA">
+            Grid.Column="1" 
+            Background="#FFDADADA">
             ACCEPT
 
         </Button>
@@ -121,7 +125,8 @@
                 HorizontalAlignment="Left" 
                 Margin="58,9,0,0" 
                 VerticalAlignment="Top" 
-                Width="55" Height="30" 
+                Width="55" 
+                Height="30" 
                 Click="btnAddCustomer_Click" 
                 FontSize="12" 
                 BorderBrush="#FF240C4D" 
@@ -141,7 +146,8 @@
             Grid.Row="2" 
             Height="53" 
             FontFamily="Swis721 BT"
-            BorderBrush="#89000000" Foreground="Black">
+            BorderBrush="#89000000" 
+            Foreground="Black">
             <ComboBox.Background>
                 <SolidColorBrush Color="White" Opacity="0.8"/>
             </ComboBox.Background>
@@ -162,7 +168,9 @@
             Grid.Column="1" 
             Margin="36,0,12,3" 
             Height="46" 
-            FontFamily="Swis721 BT" Foreground="#FF060606" BorderBrush="#89000000">
+            FontFamily="Swis721 BT" 
+            Foreground="#FF060606" 
+            BorderBrush="#89000000">
             <ComboBox.Background>
                 <SolidColorBrush Color="White" Opacity="0.75"/>
             </ComboBox.Background>
@@ -194,15 +202,42 @@
             Grid.Column="1"
             Margin="36,0,12,0" 
             Grid.Row="3" 
-            FontFamily="Swis721 BT" Background="White" />
+            FontFamily="Swis721 BT" 
+            Background="White" />
         <TextBox
-  materialDesign:HintAssist.Hint="Discount"
+            materialDesign:HintAssist.Hint="Discount"
             Name="txtDiscount"
-  Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+             Style="{StaticResource MaterialDesignFloatingHintTextBox}"
             Grid.Column="1" 
             Margin="36,0,12,0" 
             Grid.Row="4" 
             FontFamily="Swis721 BT" 
-            TextChanged="TxtCrystalWeight_TextChanged" Background="White" />
+            TextChanged="TxtCrystalWeight_TextChanged" 
+            Background="White" />
+        <Label Content="Grams"
+               Grid.Column="1" 
+               HorizontalAlignment="Left" 
+               Margin="229,25,0,0" 
+               Grid.Row="3" 
+               VerticalAlignment="Top" 
+               Height="28" 
+               Width="49" 
+               FontFamily="Swis721 BT"/>
+        <Label Content="%" 
+               Grid.Column="1" 
+               HorizontalAlignment="Left" 
+               Margin="229,10,0,0" 
+               Grid.Row="4" 
+               VerticalAlignment="Top" 
+               Height="33" 
+               Width="44" 
+               FontFamily="Swis721 BT"/>
+        <Label Content="Php" 
+               Grid.Column="1" 
+               HorizontalAlignment="Left" 
+               Margin="13,21,0,0" 
+               Grid.Row="5" 
+               VerticalAlignment="Top"
+               FontFamily="Swis721 BT"/>
     </Grid>
 </Window>

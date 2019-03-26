@@ -26,14 +26,15 @@ namespace JewelryShop
 
         private void Save_Click(object sender, RoutedEventArgs e)
         {
-            decimal[] prices = new decimal[3];
-            prices[0] = Convert.ToDecimal(Txt10k.Text);
-            prices[1] = Convert.ToDecimal(Txt18k.Text);
-            prices[2] = Convert.ToDecimal(Txt21k.Text);
+            decimal[] settings = new decimal[4];
+            settings[0] = Convert.ToDecimal(Txt10k.Text);
+            settings[1] = Convert.ToDecimal(Txt18k.Text);
+            settings[2] = Convert.ToDecimal(Txt21k.Text);
+            settings[3] = Convert.ToDecimal(txtInterest.Text);
 
-            for (int x = 0; x < prices.Length; x++)
+            for (int x = 0; x < settings.Length; x++)
             {
-                DataStorages.price.Add(prices[x]);
+                DataStorages.set.Add(settings[x]);
             }
             this.Close();
         }

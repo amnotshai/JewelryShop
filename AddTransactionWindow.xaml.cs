@@ -27,6 +27,7 @@ namespace JewelryShop
         public decimal discount;
         
 
+
         public AddTransactionWindow()
         {
             InitializeComponent();
@@ -46,17 +47,22 @@ namespace JewelryShop
                 cmbCustomers.Items.Add(customer.GetFullName());
             }
 
+           
+
         }
 
         private void btnAccept_Click(object sender, RoutedEventArgs e)
         {
+            //Calculate newTransact = new Calculate();
+            //newTransact.Price = Convert.ToDecimal(txtbPrice.Text);
             TransactionHistory transact = new TransactionHistory();
+           
             transact.Customer = cmbCustomers.Text;
             transact.Jewelry = cmbProduct.Text;
             transact.Quality = cmbQuality.Text;
             transact.Weight = Convert.ToDecimal(txtWeight.Text);
             transact.Price = txtbPrice.Text;
-            transact.AmountLoan = Convert.ToDecimal(txtbPrice.Text);
+            transact.AmountToBePayed= Convert.ToDecimal(txtbPrice.Text);
             transact.DateOfTransaction = Convert.ToString(TransactDate.Text);
             transact.Details = txtDetails.Text;
 
@@ -72,28 +78,44 @@ namespace JewelryShop
             AddCustomerWindow newCustomer = new AddCustomerWindow();
             newCustomer.data = data;
             newCustomer.Show();
-            //DataStorages.buyer.Add(cmbCustomers.Text);
         }
 
         private void TxtCrystalWeight_TextChanged(object sender, TextChangedEventArgs e)
         {
+            
             switch (cmbQuality.Text)
             {
                 case "10k":
-                    discount = DataStorages.price[0] * (Convert.ToDecimal(txtDiscount.Text)/100);
-                    price = (DataStorages.price[0]*Convert.ToDecimal(txtWeight.Text))-(Convert.ToDecimal(txtWeight.Text)*discount);
+                    discount = DataStorages.set[0] * (Convert.ToDecimal(txtDiscount.Text)/100);
+                    price = (DataStorages.set[0]*Convert.ToDecimal(txtWeight.Text))-(Convert.ToDecimal(txtWeight.Text)*discount);
                     break;
                 case "18k":
-                    discount = DataStorages.price[1] * (Convert.ToDecimal(txtDiscount.Text) / 100);
-                    price = (DataStorages.price[1] * Convert.ToDecimal(txtWeight.Text)) - (Convert.ToDecimal(txtWeight.Text) * discount);
+                    discount = DataStorages.set[1] * (Convert.ToDecimal(txtDiscount.Text) / 100);
+                    price = (DataStorages.set[1] * Convert.ToDecimal(txtWeight.Text)) - (Convert.ToDecimal(txtWeight.Text) * discount);
                     break;
                 case "21k":
-                    discount = DataStorages.price[2] * (Convert.ToDecimal(txtDiscount.Text) / 100);
-                    price = (DataStorages.price[2] * Convert.ToDecimal(txtWeight.Text)) - (Convert.ToDecimal(txtWeight.Text) * discount);
+                    discount = DataStorages.set[2] * (Convert.ToDecimal(txtDiscount.Text) / 100);
+                    price = (DataStorages.set[2] * Convert.ToDecimal(txtWeight.Text)) - (Convert.ToDecimal(txtWeight.Text) * discount);
                     break;
             }
 
             txtbPrice.Text =Convert.ToString(price);
+            
+        }
+
+    }
+    public class Calculate
+    {
+        public decimal Price { get; set; }
+
+        public decimal CalculateAmountLoan()
+        {
+            return Price * (90 / 100);
+        }
+
+        public decimal CalculateAmountToBePayed()
+        {
+            return (Price * (90 / 100)) + (Price * (90 / 100) * DataStorages.set[3]);
         }
     }
 }

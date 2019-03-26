@@ -34,11 +34,11 @@ namespace JewelryShop
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             
-            decimal loanedAmount = DataStorages.transaction[Counter.Count].AmountLoan;
+            decimal loanedAmount = DataStorages.transaction[Counter.Count].AmountToBePayed;
             decimal payment = Convert.ToDecimal(txtPayment.Text);
             decimal newValue = loanedAmount - payment;
 
-            DataStorages.transaction[Counter.Count].AmountLoan = newValue;
+            DataStorages.transaction[Counter.Count].AmountToBePayed = newValue;
 
             this.Close();
         }

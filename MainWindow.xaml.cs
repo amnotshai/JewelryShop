@@ -48,7 +48,7 @@ namespace JewelryShop
     public static class DataStorages
     {
         public static List<string> buyer = new List<string>();
-        public static List<decimal> price = new List<decimal>();
+        public static List<decimal> set = new List<decimal>();
         public static List<int> index = new List<int>();
         public static List<string> number = new List<string>();
         public static List<TransactionHistory> transaction = new List<TransactionHistory>();
