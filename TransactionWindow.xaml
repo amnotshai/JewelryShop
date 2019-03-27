@@ -11,37 +11,45 @@
         WindowStyle="None"
         WindowStartupLocation="CenterScreen"
         Activated="Window_Activated">
+    <Window.Background>
+        <ImageBrush ImageSource="Images/49403480-orange-and-blue-wallpaper.png"/>
+    </Window.Background>
     <Grid>
         <Button Content="Add Transaction" 
                 HorizontalAlignment="Left" 
-                Margin="114,378,0,0"
+                Margin="111,393,0,0"
                 VerticalAlignment="Top"
                 Width="136" 
-                Height="36" 
-                Click="AddTransaction_Click"/>
+                Height="32" 
+                Click="AddTransaction_Click" 
+                Background="#FF161B74"
+                BorderBrush="#FF23FFE1"/>
         <DataGrid HorizontalAlignment="Left" 
                   Height="344" 
-                  Margin="10,10,0,0" 
+                  Margin="10,29,0,0" 
                   VerticalAlignment="Top"
                   Width="724"
-                  Name="dgTransactionHistory">
+                  Name="dgTransactionHistory" 
+                  Background="#FFFFC6C6">
 
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Name" Binding="{Binding Customer}" Width="150"/>
-                <DataGridTextColumn Header="Product" Binding="{Binding Jewelry}"/>
-                <DataGridTextColumn Header="Actual Value" Binding="{Binding Price}"/>
-                <DataGridTextColumn Header="Product Quality" Binding="{Binding Quality}"/>
-                <DataGridTextColumn Header="Loaned Amount" Binding="{Binding AmountToBePayed}"/>
-                <DataGridTextColumn Header="Transaction Date" Binding="{Binding DateOfTransaction}" Width="150"/>
+                <DataGridTextColumn Header="Name" Binding="{Binding Customer}" Width="150" />
+                <DataGridTextColumn Header="Product" Binding="{Binding Jewelry}" />
+                <DataGridTextColumn Header="Actual Value" Binding="{Binding Price}" />
+                <DataGridTextColumn Header="Product Quality" Binding="{Binding Quality}" />
+                <DataGridTextColumn Header="Loaned Amount" Binding="{Binding AmountToBePayed}" />
+                <DataGridTextColumn Header="Transaction Date" Binding="{Binding DateOfTransaction}" Width="150" />
             </DataGrid.Columns>
 
         </DataGrid>
         <Button Content="Add Payment" 
                 HorizontalAlignment="Left" 
-                Margin="444,378,0,0" 
+                Margin="447,393,0,0" 
                 VerticalAlignment="Top" 
                 Width="131" 
-                Click="Payment_Click"/>
+                Click="Payment_Click" 
+                Background="#FF161B74"
+                BorderBrush="#FF23FFE1"/>
 
     </Grid>
 </Window>

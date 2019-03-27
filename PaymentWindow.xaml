@@ -12,37 +12,43 @@
         WindowStartupLocation="CenterScreen"
         Activated="Window_Activated"
         WindowStyle="None">
+    <Window.Background>
+        <ImageBrush ImageSource="Images/49403480-orange-and-blue-wallpaper.png"/>
+    </Window.Background>
     <Grid>
         <Button Content="Payment" 
                 HorizontalAlignment="Left" 
                 Margin="120,191,0,0" 
                 VerticalAlignment="Top" 
-                Width="117" Click="Button_Click"/>
+                Width="117"
+                Click="Button_Click" 
+                Background="#FF161B74"
+                BorderBrush="#FF23FFE1"/>
         <Label Content="Name:" 
                HorizontalAlignment="Left" 
                Margin="30,47,0,0" 
                VerticalAlignment="Top" 
-               Width="47" 
-               Height="36"/>
+               Width="94" 
+               Height="36" FontFamily="Swis721 BT" FontSize="20" Foreground="#DDFFFFFF"/>
         <Label Content="Payment:" 
                HorizontalAlignment="Left" 
                Margin="30,123,0,0" 
-               VerticalAlignment="Top"/>
+               VerticalAlignment="Top" FontFamily="Swis721 BT" FontSize="20" Width="94" Foreground="#DDFFFFFF"/>
         <TextBlock HorizontalAlignment="Left"
                    Name="txtbName"
-                   Margin="82,47,0,0" 
+                   Margin="129,47,0,0" 
                    TextWrapping="Wrap" 
                    VerticalAlignment="Top"
                    Height="36" 
-                   Width="155"/>
+                   Width="190" FontFamily="Swis721 BT" FontSize="20" Foreground="White"/>
         <TextBox
             materialDesign:HintAssist.Hint="Input Payment Here"
             Name="txtPayment"
             Style="{StaticResource MaterialDesignFloatingHintTextBox}"
-            Margin="94,104,144,88" 
+            Margin="129,104,27,80" 
             FontFamily="Swis721 BT" 
-            Background="White" 
-            FontSize="11" />
+            Background="{x:Null}" 
+            FontSize="20" Foreground="White" CaretBrush="#FFF1F1F1" BorderBrush="#89FFFFFF" />
 
     </Grid>
 </Window>

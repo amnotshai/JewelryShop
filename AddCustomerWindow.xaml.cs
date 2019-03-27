@@ -51,7 +51,7 @@ namespace JewelryShop
                     
                 else
                 {
-                    MessageBox.Show("hahahaHa");
+                    MessageBox.Show("Please input number in correct format.");
                 }
             }
 

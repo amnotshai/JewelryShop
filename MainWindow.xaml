@@ -12,27 +12,32 @@
         WindowStartupLocation="CenterScreen"
         WindowStyle="None">
     <Window.Background>
-        <ImageBrush ImageSource="Images/abstract-2829961_960_720.png"/>
+        <ImageBrush ImageSource="Images/49403480-orange-and-blue-wallpaper.png"/>
     </Window.Background>
     <Grid>
         <Button x:Name="btnAddTransaction" 
                 Content="Add Transaction" 
                 HorizontalAlignment="Left" 
-                Margin="206,212,0,0" 
+                Margin="328,348,0,0" 
                 VerticalAlignment="Top" 
-                Width="186" 
+                Width="218" 
                 Click="btnAddTransaction_Click" 
                 Height="64" 
-                Background="#FF4785F1"
-                BorderBrush="#FFBCCF66"/>
-        <Button Content="Set Price" 
+                Background="#FF161B74"
+                BorderBrush="#FF23FFE1" FontFamily="Swis721 BT" FontSize="24"/>
+        <Button Content="App Settings" 
                 Name="SetPrice"
                 HorizontalAlignment="Left" 
-                Margin="206,102,0,0" 
+                Margin="55,348,0,0" 
                 VerticalAlignment="Top"
-                Width="186" 
+                Width="187" 
                 Click="SetPrice_Click" 
-                Background="#FF4785F1" 
-                BorderBrush="#FFBCCF66" Height="71"/>
+                Background="#FF161B74" 
+                BorderBrush="#FF23FFE1"
+                Height="64" 
+                FontFamily="Swis721 BT" 
+                FontSize="24"/>
+        <Image Margin="10,10,282,290" Source="cooltext319460624327699.png" Stretch="Fill"/>
+        <Image Margin="128,95,23,209" Source="cooltext319460686386373.png" Stretch="Fill"/>
     </Grid>
 </Window>

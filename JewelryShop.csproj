@@ -192,6 +192,20 @@
   <ItemGroup>
     <Resource Include="Images\vector-geometric-pattern-art-patterns-rative-islamic-design.jpg" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="User_2.svg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Weight scale.svg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="cooltext319460478093390.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="cooltext319460624327699.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="cooltext319460686386373.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

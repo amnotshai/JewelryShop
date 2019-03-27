@@ -48,10 +48,17 @@ namespace JewelryShop
         {
             if (dgTransactionHistory.SelectedIndex >= 0 && dgTransactionHistory.SelectedIndex <= DataStorages.transaction.Count)
             {
-
-                Counter.Count = dgTransactionHistory.SelectedIndex;
-                PaymentWindow NewPayment = new PaymentWindow();
-                NewPayment.Show();
+                if ((DataStorages.transaction[dgTransactionHistory.SelectedIndex].AmountToBePayed == 0)||(DataStorages.transaction[dgTransactionHistory.SelectedIndex].AmountToBePayed<0))
+                {
+                    MessageBox.Show("Transaction is fully paid.");
+                }
+                else
+                {
+                    Counter.Count = dgTransactionHistory.SelectedIndex;
+                    PaymentWindow NewPayment = new PaymentWindow();
+                    NewPayment.Show();
+                }
+               
             }
             else
             {

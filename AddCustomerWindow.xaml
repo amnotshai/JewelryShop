@@ -11,12 +11,13 @@
         WindowStartupLocation="CenterScreen"
         WindowStyle="None">
     <Window.Background>
-        <ImageBrush ImageSource="Images/gray-triangle-patterned-white-background_53876-86390.jpg"/>
+        <ImageBrush ImageSource="Images/49403480-orange-and-blue-wallpaper.png"/>
     </Window.Background>
     <Grid>
+        <Grid.Background>
+            <ImageBrush/>
+        </Grid.Background>
         <Grid.RowDefinitions>
-            <RowDefinition/>
-            <RowDefinition/>
             <RowDefinition/>
             <RowDefinition/>
             <RowDefinition/>
@@ -30,100 +31,60 @@
         <Label x:Name="FirstName" 
                Content="First Name" 
                HorizontalAlignment="Center" 
-               Margin="63,15,104,0" 
+               Margin="63,21,93,0" 
                VerticalAlignment="Top" 
-               Height="38" 
-               Width="129" 
-               FontSize="14"/>
+               Height="43" 
+               Width="140" 
+               FontSize="24" FontFamily="Swis721 BT" Foreground="#DDFFFFFF"/>
         <TextBox x:Name="txtFirstName" 
                  HorizontalAlignment="Center" 
                  Height="43" 
-                 Margin="22,10,43,0" 
+                 Margin="10,21,10,0" 
                  TextWrapping="Wrap"  
                  VerticalAlignment="Top" 
-                 Width="231" 
+                 Width="276" 
                  Grid.Column="1" 
-                 FontSize="14"/>
+                 FontSize="24" FontFamily="Swis721 BT" Foreground="White" BorderBrush="#89FFFFFF"/>
         <Label x:Name="MiddleInitial" 
-               Content="Middle Initial" 
+               Content="Middle Name" 
                HorizontalAlignment="Center" 
-               Margin="63,10,104,0" 
+               Margin="63,24,81,0" 
                VerticalAlignment="Top" 
                Height="43" 
-               Width="129" 
+               Width="152" 
                Grid.Row="1" 
-               FontSize="14"/>
+               FontSize="24" FontFamily="Swis721 BT" Foreground="#DDFFFFFF"/>
         <TextBox x:Name="txtMiddleName" 
                  HorizontalAlignment="Center" 
                  Height="43" 
-                 Margin="22,10,43,0" 
+                 Margin="10,24,10,0" 
                  TextWrapping="Wrap" 
                  VerticalAlignment="Top"
-                 Width="231" 
+                 Width="276" 
                  Grid.Column="1" 
                  Grid.Row="1" 
-                 FontSize="14"/>
+                 FontSize="24" FontFamily="Swis721 BT" Foreground="White" BorderBrush="#89FFFFFF"/>
         <Label x:Name="LastName" 
                Content="Last Name" 
                HorizontalAlignment="Left" 
-               Margin="63,10,0,0" 
+               Margin="63,25,0,0" 
                VerticalAlignment="Top" 
                Height="43" 
                Width="129" 
                Grid.Row="2" 
-               FontSize="14"/>
+               FontSize="24" FontFamily="Swis721 BT" Foreground="#DDFFFFFF"/>
         <TextBox x:Name="txtLastName" 
                  HorizontalAlignment="Center" 
                  Height="43" 
-                 Margin="22,10,43,0" 
+                 Margin="10,25,10,0" 
                  TextWrapping="Wrap" 
                  VerticalAlignment="Top" 
-                 Width="231" 
+                 Width="276" 
                  RenderTransformOrigin="0.495,0.503" 
                  Grid.Column="1" 
                  Grid.Row="2" 
-                 Background="White" 
-                 FontSize="14"/>
-        <Label x:Name="Address" 
-               Content="Address" 
-               HorizontalAlignment="Center" 
-               Margin="63,10,104,10" 
-               VerticalAlignment="Center" 
-               Height="44" 
-               Width="129" 
-               Grid.Row="5" 
-               Background="#FFFBF9F9" 
-               FontSize="14"/>
-        <TextBox x:Name="txtAddress" 
-                 HorizontalAlignment="Center" 
-                 Height="38" 
-                 Margin="22,16,43,0" 
-                 TextWrapping="Wrap"  
-                 VerticalAlignment="Top" 
-                 Width="231" 
-                 Grid.Column="1" 
-                 Grid.Row="5" 
-                 Background="#FFFDFBFB" 
-                 FontSize="14"/>
-        <Label x:Name="BirthDate" 
-               Content="Birth Date" 
-               HorizontalAlignment="Center" 
-               Margin="63,12,104,0" 
-               VerticalAlignment="Top" 
-               Height="41" 
-               Width="129" 
-               Grid.Row="4" 
-               Background="White" 
-               FontSize="14"/>
-
-        <DatePicker x:Name="dtBDay" 
-                    HorizontalAlignment="Center" 
-                    Margin="22,12,43,0" 
-                    VerticalAlignment="Top" 
-                    Width="231" 
-                    Height="41" 
-                    Grid.Column="1" 
-                    Grid.Row="4" Background="White" FontSize="14"/>
+                 Background="{x:Null}" 
+                 FontSize="24" FontFamily="Swis721 BT" BorderBrush="#89FFFFFF" Foreground="White"/>
         <Button x:Name="BtnAddCustomer" 
                 Content="Add" 
                 HorizontalAlignment="Center" 
@@ -135,38 +96,38 @@
                 Grid.ColumnSpan="2" 
                 Grid.Row="6" 
                 RenderTransformOrigin="0.628,0.446" 
-                BorderBrush="Black" 
-                Background="#FFE4DDF1" 
-                Foreground="#DD000000"/>
+                Background="#FF161B74"
+                BorderBrush="#FF23FFE1" 
+                Foreground="#DDFFFFFF"/>
         <TextBox x:Name="txtContactNumber" 
             HorizontalAlignment="Center" 
-            Height="30" 
-            Margin="84,23,43,0" 
+            Height="43" 
+            Margin="79,19,10,0" 
             TextWrapping="Wrap" 
             VerticalAlignment="Top" 
-            Width="169" 
+            Width="207" 
             RenderTransformOrigin="0.495,0.503" 
             Grid.Column="1" 
             Grid.Row="3" 
-            Background="White" 
-            FontSize="14"/>
+            Background="{x:Null}" 
+            FontSize="24" FontFamily="Swis721 BT" BorderBrush="#89FFFFFF" Foreground="White"/>
         <Label x:Name="ContactNumber" 
             Content="Contact Number" 
             HorizontalAlignment="Left" 
-            Margin="63,11,0,0" 
+            Margin="52,19,0,0" 
             VerticalAlignment="Top" 
             Height="52" 
-            Width="129" 
-            Grid.Row="3" FontSize="14"/>
+            Width="203" 
+            Grid.Row="3" FontSize="24" FontFamily="Swis721 BT" Background="{x:Null}" Foreground="#DDFFFFFF"/>
         <Label Content="+639" 
                Grid.Column="1" 
                HorizontalAlignment="Left" 
-               Margin="22,23,0,0" 
+               Margin="5,19,0,0" 
                Grid.Row="3" 
                VerticalAlignment="Top" 
-               Width="57" 
-               Height="30" 
-               FontSize="14"/>
+               Width="74" 
+               Height="43" 
+               FontSize="24" FontFamily="Swis721 BT" Background="{x:Null}" Foreground="#DDFFFFFF"/>
     </Grid>
 
 </Window>

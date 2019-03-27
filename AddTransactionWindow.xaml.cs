@@ -53,8 +53,6 @@ namespace JewelryShop
 
         private void btnAccept_Click(object sender, RoutedEventArgs e)
         {
-            //Calculate newTransact = new Calculate();
-            //newTransact.Price = Convert.ToDecimal(txtbPrice.Text);
             TransactionHistory transact = new TransactionHistory();
            
             transact.Customer = cmbCustomers.Text;
@@ -80,7 +78,7 @@ namespace JewelryShop
             newCustomer.Show();
         }
 
-        private void TxtCrystalWeight_TextChanged(object sender, TextChangedEventArgs e)
+        private void TxtDiscount_TextChanged(object sender, TextChangedEventArgs e)
         {
             
             switch (cmbQuality.Text)
@@ -102,20 +100,6 @@ namespace JewelryShop
             txtbPrice.Text =Convert.ToString(price);
             
         }
-
     }
-    public class Calculate
-    {
-        public decimal Price { get; set; }
-
-        public decimal CalculateAmountLoan()
-        {
-            return Price * (90 / 100);
-        }
-
-        public decimal CalculateAmountToBePayed()
-        {
-            return (Price * (90 / 100)) + (Price * (90 / 100) * DataStorages.set[3]);
-        }
-    }
+   
 }
